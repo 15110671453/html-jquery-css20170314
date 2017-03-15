@@ -3,10 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML网页元素定位</title>
+    <style type="text/css">
+
+        body  {
+            font-family:sans-serif;
+            font-size: 14px;
+        }
+        nav{
+            font-size: 20px;
+        }
+        div{
+            position: relative;
+            width: 350px;
+            height: 300px;
+            background-color: #f0f0f0;
+        }
+        div.normal{
+            margin: 2px;
+            padding: 2px;
+            width: auto;
+            height: auto;
+            border: 1px solid #f0f0f0;
+        }
+        div.relative1{
+            position: relative;
+            width: 120px;
+            height: 60px;
+            background-color: #ccc;
+        }
+        div.relative2{
+            position: relative;
+            width: 120px;
+            height: 60px;
+            left: 50px;
+            top:50px;
+            background-color: #aaa;
+        }
+        div.relative3{
+            position: relative;
+            width: 120px;
+            height: 60px;
+            top:-5px;
+            left:80px;
+            background-color: #666;
+
+        }
+        div.relative4{
+            position: relative;
+            width: 120px;
+            height: 60px;
+            top:30px;
+            left: -10px;
+            background-color: #333;
+        }
+        div.relative5{
+            position: relative;
+            width: 120px;
+            height: 60px;
+            top: 20px;
+            left: 150px;
+            background-color: #333;
+        }
+
+        p{
+            text-align: justify;
+            text-indent: 2em;
+        }
+    </style>
 </head>
 <body>
         <h3>HTML网页元素定位</h3>
+<div class="normal">
+    <p>
+        所谓网页元素的定位 其实就是通过一系列position属性对网页元素位置进行设定
+        在CSS规范中 position属性可以取值relative、absolute、static、fixed、inherit这
+        5种 具体含义如下:<br/>
+        relative 生成相对定位的网页元素 ，相对于其正常位置进行定位
+        <br/>
+        absolute 生成绝对定位的网页元素 相对于static定位以外的第一个父元素进行
+        定位 网页元素的位置通过 left top right bottom 属性进行设定
+        <br/>
+        static 默认值 相当于没有定位 网页元素出现在正常的流中（使用static定位就相当于忽略了
+        top bottom left right 或者z-index 的定义）
+        <br/>
+        fixed 生成绝对定位的元素 相对于浏览器窗口进行定位 元素的位置通过left top right bottom
+        进行设定
+        <br/>
+        inherit规定从父元素继承position属性的设定
+    </p>
+</div>
+        <hr>
+     <h3>相对定位</h3>
+<div class="normal">
+    <p>通过position属性值为relative实现相对定位 所谓相对定位 就是通过设定某元素的垂直
+    或水平的位置（通过top right bottom left 实现） 让这个元素 相对于 其起点进行移动
 
+    </p>
+</div>
+        <hr>
+<header>
+    <nav>CSS相对定位</nav>
+</header>
+        <hr>
+<div>
+    <div class="relative1">相对定位元素（classs= relative1）</div>
+    <div class="relative2">相对定位元素（classs= relative2）</div>
+    <div class="relative3">相对定位元素（classs= relative3）</div>
+    <div class="relative4">相对定位元素（classs= relative4）</div>
+    <div class="relative5">相对定位元素（classs= relative5）</div>
+    <p>
+        第一个div标签元素 没有定义偏移 因此其原点显示在父元素的左上角位置
+        <br/>
+        第二个元素发生了偏移 注意此处相对定位 发生的偏移是相对于原始位置来计算的
+        那么 原始位置是什么样的呢 可以将代码中全部关于偏移的css样式定义去掉 在浏览器
+        运行一下就明白了
+        <br/>
+        设计人员在使用相对定位时一定要注意 原始位置很重要
+        任何相对偏移都是基于原始位置计算的
+
+
+
+    </p>
+</div>
 
 </body>
 </html>

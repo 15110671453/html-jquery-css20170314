@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS之绝对定位</title>
+    <style type="text/css">
+
+        body{
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        nav{
+            font-size: 20px;
+        }
+
+        div.absolute1 {
+            position: absolute;
+            width: 350px;
+            height:300px;
+            background-color: #f0f0f0;
+        }
+
+        div.absolute2{
+            width: 300px;
+            height:250px;
+            background-color: #ccc;
+        }
+        div.absolute3{
+            position:absolute;
+            width: 250px;
+            height: 200px;
+            top: 30px;
+            left: 30px;
+            background-color: #aaa;
+        }
+        div.absolute4{
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            top:30px;
+            left:80px;
+            background-color: #666;
+        }
+        div.relative5{
+            position: relative;
+            width: 200px;
+            height: 50px;
+            left: 20px;
+            background-color: #333;
+        }
+        div.absolute5{
+            position: absolute;
+            width: 200px;
+            height:50px;
+            top: 80px;
+            left:30px;
+            background-color:#888;
+        }
+    </style>
+</head>
+<body>
+    <header id="id-header">
+        <nav>网页设计绝对定位</nav>
+    </header>
+    <hr>
+    <div class="absolute1">
+            绝对定位层(class=absolute1)
+        <div class="absolute2">
+            这里absolute2既没有设置相对定位也没有设置绝对定位
+            绝对定位层(class=absolute2)
+            <div class="absolute3">
+                这里3 设置了绝对定位 但是发现 它是相对于1来定位的
+                因为2 没有设置任何有关定位的position属性
+                er绝对定位特点是：根据最近一个有定位位置的父元素来计算的
+                如果父元素没有设置定位属性 则将以body标签元素的坐标原点进行定位
+                绝对定位层(class=absolute3)
+                <div class="absolute4">
+                    绝对定位层(class=absolute4)
+                    <div class="relative5">
+                        相对对定位层(class=absolute5)
+                    </div>
+                    <div class="absolute5">
+                        绝对定位层(class=absolute5)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <p>
+            设计人员使用绝对定位 需要注意
+            父元素是否使用定位方式很重要 这里第6个div与第5个div
+            同为第4个div标签元素的并列子元素，因此第六个div的绝对定位是按照第四个div来计算的
+            ；
+            任何绝对定位都是基于最近的使用过定位方式的父元素来进行计算的
+        </p>
+    </div>
+
+</body>
+</html>
