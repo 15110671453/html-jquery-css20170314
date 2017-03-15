@@ -1,0 +1,28 @@
+body{
+    font:normal 12px/1.0em arial,vedana;
+    /*设置页面字体*/
+}
+
+h1{
+    font:italic 18px/1.8em arial,verdana;
+    /*设置字体*/
+    letter-spacing: -0.2em;
+    /*设置字符间距*/
+}
+
+
+h3{
+
+    font:italic 24px/2.4em arial,verdana;
+    /*设置字体*/
+    letter-spacing: -0.2em;
+    /*设置字符间距*/
+}
+
+p{
+
+    font:italic 12px/1.2em arial,verdana;
+    /*设置字体*/
+    letter-spacing: 3px;
+    /*设置字符间距*/
+}

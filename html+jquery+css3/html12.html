@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML为标签添加name属性</title>
+    <style type="text/css">
+        input   {
+            margin:2px;
+            padding:2px;
+            width: 64px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+        <h3>HTML标签name</h3>
+        <hr>
+        <label >数组:</label><br/>
+        <input type="text" name="name-input" value="input"/><br/>
+        <input type="text" name="name-input" value="input"/><br/>
+        <input type="text" name="name-input" value="input"/><br/>
+        <input type="text" name="name-input" value="input"/><br/><br/>
+        input数组长度:<input type="text" id="id-input" value=""/><br/>
+        <script type="text/javascript">
+            var len =document.getElementsByName('name-input').length;
+            document.getElementById('id-input').value =len;
+        </script>
+        <labrl>请选择您喜爱的编程语言:</labrl>
+        <input type="radio" name="name-radio" value="CSS"/>CSS<br/>
+        <input type="radio" name="name-radio" value="jQuery"/>jQuery<br/>
+        <input type="radio" name="name-radio" value="jQuery Mobile"/>jQuery Mobile<br/>
+
+        <div>
+            关于name属性:<br/>
+            在HTML规范中 name属性主要是用于定义表单域内标签
+            比如input select textarea iframe frame window button等
+            ，这些标签都与表单提交相关，一般服务器端只接收表单内具有name属性的元素，所以仅仅
+            具有id属性的标签是无法通过表单服务器端接收的<br/>
+
+            另外 我们知道关于radio类标签必须在同一个分组中，且check操作是互斥的，即
+            同一时间只能选择其中一个radio标签，所以这个分组就是根据相同的name属性来实现的
+            <br/>
+            最后name属性与id属性类似 同样可以定义锚链接(link anchor),可以通过javascript
+            脚本操作对象 通过css样式表为带有指定name的对象添加或修改样式
+        </div>
+
+</body>
+</html>

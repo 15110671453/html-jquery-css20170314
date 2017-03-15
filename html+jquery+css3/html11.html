@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为HTML标签添加id name class属性</title>
+    <style type="text/css">
+        div {
+            margin: 2px;
+            padding:2px;
+            width: auto;
+            height: auto;
+            border: 1px solid #000;
+
+            }
+    </style>
+</head>
+<body>
+        <h1>为标签添加id属性</h1>
+        <hr>
+        <div>
+            <p>
+                通过id属性可以定义锚链接(link anchor)<br/>
+                可以通过javascript来操作这个对象<br/>
+                可以通过css样式表为带有指定id的对象添加或修改样式等等
+            </p>
+        </div>
+        <hr>
+        <h3>HTML之标签id</h3>
+        <hr>
+        <div>div</div>
+        <div id="id-div">div</div>
+        <script type="text/javascript">
+            document.getElementById('id-div').innerHTML+='操作id';
+        </script>
+</body>
+</html>

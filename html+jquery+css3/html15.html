@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断浏览器对html属性的支持</title>
+    <style type="text/css">
+        div{
+
+            margin: 2px;
+            padding: 2px;
+            width: auto;
+            height: auto;
+            border: 1px solid #e0e0e0;
+            background: #f0f0f0;
+
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+
+    function isSupport(prop){
+        return prop in document.createElement('div');
+    }
+</script>
+
+<h1>HTML之判断属性支持</h1>
+
+<hr>
+
+<div id="id-div"></div>
+
+<script type="text/javascript">
+
+    var prop = ['id','name','value','type','style','title'];
+
+    for(var i in prop) {
+        isSupportProp(prop[i]);
+    }
+    function isSupportProp(v) {
+        if (isSupport(v)){
+            document.getElementById('id-div').innerHTML+='层(div)标签支持'+v+'属性'+'<br/>';
+
+        }else {
+            document.getElementById('id-div').innerHTML+='层(div)标签不支持'+v+'属性'+'<br/>';
+
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

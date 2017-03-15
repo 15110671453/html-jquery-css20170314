@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为标签添加CSS属性</title>
+    <style type="text/css">
+        p.classnormal{
+            margin: 4px;
+            padding: 4px;
+            width: 196px;
+            font:normal 13.5px/1.2em arial,verdana;
+        }
+        p.classitalic{
+            margin: 4px;
+            padding: 2px;
+            width: 196px;
+            font:italic 13.5px/1.2em arial,verdana;
+        }
+        p.classbold{
+            margin: 4px;
+            padding: 2px;
+            width: 196px;
+            font:bold 13.5px/1.2em arial,verdana;
+        }
+
+    </style>
+</head>
+<body>
+        <h3>HTML之标签class</h3>
+        <hr>
+        <div>
+            <button type="button" id="id-button-normal" onclick="on_normal_click()">
+            change to normal style
+            </button>
+            <button type="button" id="id-button-italic" onclick="on_italic_click()">
+                change to italic style
+            </button>
+            <button type="button" id="id-button-bold" onclick="on_bold_click()">
+                change to bold style
+            </button>
+            <p class="classnormal">
+                HTML之标签class
+
+            </p>
+            <p class="classnormal">
+                HTML之标签class
+
+            </p>
+            <p class="classnormal">
+                HTML之标签class
+
+            </p>
+            <p class="classnormal">
+                HTML之标签class
+
+            </p>
+            <p class="classnormal">
+                HTML之标签class
+
+            </p>
+
+
+        </div>
+        <script type="text/javascript">
+
+            function on_normal_click() {
+                for(i=0;i<5;i++){
+                    document.getElementsByTagName('p')[i].className="classnormal";
+                }
+            }
+
+
+            function on_italic_click() {
+                for(i=0;i<5;i++){
+                    document.getElementsByTagName('p')[i].className="classitalic";
+                }
+            }
+            function on_bold_click() {
+                for(i=0;i<5;i++){
+                    document.getElementsByTagName('p')[i].className="classbold";
+                }
+            }
+        </script>
+
+</body>
+</html>

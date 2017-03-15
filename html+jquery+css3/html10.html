@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML载入外部脚本库与异步执行</title>
+    <style type="text/css">
+        div {
+
+            margin: 2px;
+            padding: 2px;
+            width: auto;
+            height: auto;
+            border: 1px solid #000;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/src1.js"></script>
+</head>
+<body>
+    <h3>HTML之载入外部脚本</h3>
+    <hr>
+    <div id="id-div-body">body script log:</div>
+    <script type="text/javascript" src="js/src2.js"></script>
+    <div> 页面执行 阻塞页面顺利显示被阻塞了</div>
+
+</body>
+</html>

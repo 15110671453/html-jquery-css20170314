@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML内嵌脚本</title>
+    <style type="text/css">
+        div{
+            margin: 2px;
+            padding: 2px;
+            width: auto;
+            height: auto;
+            border: 1px solid #000;
+        }
+
+    </style>
+    <script type="application/javascript">
+
+        document.write('<h5>log:header - script</h5>');
+
+        document.close();
+
+        document.getElementById('id-div-header').innerHTML+='<br><h3>header-script</h3>';
+
+
+    </script>
+</head>
+<body>
+
+        <h3>HTML之嵌入式script</h3>
+        <div id="id-div-header">header script log:</div>
+        <script type="text/javascript">
+
+            document.write('<h5>log:dynamic - script</h5>');
+            document.write("<div id='id-div-dynamic'>dynamic script log</div>");
+            document.close();
+
+            document.getElementById('id-div-dynamic').innerHTML+='<h3>dynamic-script</h3>';
+
+
+        </script>
+        <div id="id-div-body">body script log:</div>
+        <script type="text/javascript">
+
+            document.write('<h5>log:body-script</h5>');
+            document.close();
+
+            document.getElemntById('id-div-body').innerHTML+='<br><h3>bpdy - script </h3>';
+
+        </script>
+<div>
+    注意 script脚本的执行原则：<br/>
+    按顺序载入<br/>
+    载入即执行<br/>
+    执行时会阻塞内容<br/>
+    应避免script脚本没有有效执行<br/>
+</div>
+
+</body>
+</html>
