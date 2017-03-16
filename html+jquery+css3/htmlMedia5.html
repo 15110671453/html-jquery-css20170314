@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用媒体查询</title>
+    <style type="text/css">
+        @media screen  and (min-width:1441px){
+            /*如果屏幕宽度>1441px 将会载入这里的CSS*/
+            body{
+                background-color: #4cae4c;
+            }
+        }
+        @media screen and(min-width: 1024px) and (max-width: 1440px){
+            /*如果屏幕宽度 介于1024px 到 1440px 将会载入这里的CSS*/
+            body{
+                background-color: #2aabd2;
+            }
+        }
+
+        @media screen  and(min-width: 768px) and (max-width: 1023px){
+            body{
+                background-color: #985f0d;
+            }
+        }
+
+        @media screen and(max-width: 767px){
+            /*如果屏幕宽度小于 768px 将会载入这里的CSS*/
+
+            body{
+                background-color: #419641;
+            }
+        }
+
+        @media screen and(max-device-width: 480px) {
+
+            /*如果屏幕可见度 小于等于480px 将会载入这里的CSS*/
+
+            body{
+                background-color: #761c19;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
