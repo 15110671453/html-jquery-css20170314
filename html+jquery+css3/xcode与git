@@ -1,0 +1,24 @@
+使用git获取jquery clone
+
+发现
+bogon:jquerygit admindyn$ git clone git://github.com/jquery/jquery.git
+xcrun: error: active developer path ("/Applications/Xcode.app/Contents/Developer") does not exist
+Use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, or use `xcode-select --install` to install the standalone command line developer tools.
+See `man xcode-select` for more details.
+
+
+原因在于我们在mac上安装两个版本的xcode 并且更改了xcode名字 为xcode8.2.1.app xcode7.2.app
+所以需要指明xcode目录 原先的默认目录没有
+
+bogon:Applications admindyn$ xcode-select --switch /Applications/Xcode8.2.1.app/
+xcode-select: error: --switch must be run as root (e.g. `sudo xcode-select --switch <xcode_folder_path>`).
+bogon:Applications admindyn$ sudo xcode-select --switch /Applications/Xcode8.2.1.app/
+Password:
+bogon:Applications admindyn$ git clone git://github.com/jquery/jquery.git
+Cloning into 'jquery'...
+remote: Counting objects: 41950, done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 41950 (delta 13), reused 1 (delta 1), pack-reused 41915
+Receiving objects: 100% (41950/41950), 26.61 MiB | 894.00 KiB/s, done.
+Resolving deltas: 100% (29571/29571), done.
+bogon:Applications admindyn$

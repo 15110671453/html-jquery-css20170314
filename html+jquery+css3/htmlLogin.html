@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>响应式登陆</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <style type="text/css">
         html,body{
             height: 100%;
@@ -35,6 +36,7 @@
         }
 
         @media screen and (min-width:500px){
+            /*窗口宽度大于500px的 载入这里的css*/
             .lgin-div{
 
                 left: 50%;
@@ -56,12 +58,89 @@
 
 
         }
+        .login-form{
+            width: 100%;
+            max-width: 400px;
+            height: 200px;
+            margin: 20px auto 0px auto;
+            padding-top: 20px;
+        }
+        .input-group{
+            margin: 0px 0px 30px 0px !important;
 
+
+        }
+        .form-control,.input-group{
+            height: 48px;
+        }
+        .form-group{
+            margin-bottom: 0px !important;
+        }
+
+        .login-title{
+            padding: 20px 10px;
+            background-color: rgba(0,0,0,0.3);
+
+        }
+        .login-title h3 {
+            margin-top: 10px !important;
+        }
+        .btn-sm{
+            padding: 8px 24px !important;
+            font-size: 16px !important;
+        }
 
 
     </style>
 </head>
 <body>
+
+        <div class="container">
+
+            <div class="login-div">
+                <!----登陆title--->
+                <div class="login-title">
+                    <h3>响应式登陆界面 BootStrap</h3>
+                </div>
+                <div class="login-content">
+                    <div class="login-form">
+                        <form action="#" method="post">
+                            <!---第一个模块 用户名输入框--->
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">用&nbsp;户&nbsp;名</span>
+
+                                        <input type="text" id="username" name="username" class="form-control" placeholder="用户名"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---第三个模块 密码输入框--->
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+
+                                        <input type="text" id="password" name="password" class="form-control" placeholder="密码"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!---第三个模块 登陆按钮--->
+                            <div class="form-group">
+                                <div class="col-xs-4 col-xs-offset-4">
+                                    <button type="submit" class="btn btn-sm btn-info">
+                                        &nbsp;登&nbsp;&nbsp;录&nbsp;
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
 
 

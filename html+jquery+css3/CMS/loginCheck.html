@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容管理系统登陆模块</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <link rel="stylesheet" media="screen" href="../css/bootstrap-admin-theme.css">
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.md5.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+
+    <style type="text/css">
+        .alert{
+            margin: 0 auto 20px;
+        }
+
+    </style>
+</head>
+<body class="bootstrap-admin-without-padding">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <!---第一块--->
+                <div class="page-header bootstrap-admin-content-title">
+                    <h2>内容管理系统</h2>
+
+                </div>
+                <!---第二块--->
+                <div class="alert alert-info">
+                    <a href="#" class="close" data-dismiss="alert" >&times;</a>
+                    请输入用户注册信息并单击登陆按钮
+                </div>
+                <!---第三块--->
+                <form action="./admin.html" method="get" class="bootstrap-admin-login-form">
+                    <!---第3。1块--->
+
+                   <h3>登陆系统</h3>
+                    <!---第3。2块--->
+                    <div class="form-group">
+                        <input type="text" id="userid" class="form-control" name="userid" onblur="on_userid_blur();" placeholder="用户id"/>
+                        <span id="id-span-userid" class="help-block">Please enter userid</span>
+                    </div>
+                    <!---第3。3块--->
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" type="password" id="password" name="password" onblur="on_pwd_blur();" placeholder="登陆密码"/>
+
+                        <span id="id-span-password" class="help-block">
+                            Please Enter password
+                        </span>
+
+                    </div>
+                    <div class="form-group">
+                        <label > <input type="checkbox" name="remember_me">
+                        记住我
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary" type="submit" id="id-submit" disabled>登陆</button>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="reg.html">新用户注册</a>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
+
+
+</body>
+<script src="../js/init.js"></script>
+<script src="../js/loginCheck.js"></script>
+
+</html>
