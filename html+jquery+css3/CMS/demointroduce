@@ -1,0 +1,16 @@
+这里简单使用Bootstrap jquery
+
+构建内容管理系统
+
+使用说明：
+
+用户访问系统 先默认进入loginCheck页面
+
+该页面 init.js 会初始化系统的管理员信息到localstorage
+
+对于系统构建者直到该细节
+
+不知道的陌生用户 则点击注册去注册reg.html
+
+注册之后回退到loginCheck 点击登陆即可
+

@@ -64,18 +64,23 @@ function on_userid_blur() {
 
      var v_userid =document.getElementById('userid').value;
      var  v_passwd=document.getElementById('password').value;
+     console.log('--用户ID'+v_userid);
 
      var md5_password=$.md5(v_passwd);
 
      for (var i=0;i<localStorage.length;i++){
 
          var data = JSON.parse(localStorage.getItem(localStorage.key(i)));
-
-         if ((v_userid=data.userid)&&(md5_password==data.pwdmd5)){
+         console.log('用户'+data+'用户ID'+data.userid);
+         console.log('密码'+data+'用户ID'+data.userid);
+         if ((v_userid==data.userid)&&(md5_password==data.pwdmd5)){
              g_userid=data.userid;
              g_pwd=data.pwdmd5;
+             console.log('权限'+data.reserved);
              g_reserved=data.reserved;
              v_validata_pwd=true;
+             return v_validata_pwd;
+
          }else {
              v_validata_pwd=false;
          }
@@ -87,9 +92,7 @@ function on_userid_blur() {
  }
 
 
- /*
- * 验证用户密码
- * */
+ /*验证用户密码*/
 
  function  on_pwd_blur() {
 
@@ -136,12 +139,16 @@ function on_userid_blur() {
 
  function  loginSubmit() {
 
+     console.log(g_reserved);
      if (g_reserved=='1'){
-         document.location.href='../CMS/admin.html?userid='+=g_userid+'&password='+g_pwd;
+         var url1 ='../CMS/admin.html?userid='+g_userid+'&password='+g_pwd;
+         document.location.href=url1;
      }else if(g_reserved=='2'){
-         document.location.href='../CMS/user.html?userid='+=g_userid+'&password='+g_pwd;
+         var url2 ='../CMS/user.html?userid='+g_userid+'&password='+g_pwd;
+         document.location.href=url2;
      }else if(g_reserved=='3'){
-         document.location.href='../CMS/tour.html?userid='+=g_userid+'&password='+g_pwd;
+         var url3 ='../CMS/tour.html?userid='+g_userid+'&password='+g_pwd;
+         document.location.href=url3;
      }else {
          document.location.href='404.html';
      }

@@ -55,7 +55,7 @@ function index_item_pwd() {
             g_pwd = data.pwdmd5;
             g_reserved = data.reserved;
             v_validata_pwd = true;
-            break;
+            return v_validata_pwd;
         } else {
             v_validata_pwd = false;
         }
@@ -96,11 +96,11 @@ function validateSubmit() {
  */
 function onLoginSubmit() {
     if(g_reserved == "1") {
-        document.location.href = "admin.html?userid=" + g_userid + "&password=" + g_pwd;
+        document.location.href = "./admin.html?userid=" + g_userid + "&password=" + g_pwd;
     } else if(g_reserved == "2") {
-        document.location.href = "main.html?userid=" + g_userid + "&password=" + g_pwd;
+        document.location.href = "./main.html?userid=" + g_userid + "&password=" + g_pwd;
     } else if(g_reserved == "3") {
-        document.location.href = "tour.html?userid=" + g_userid + "&password=" + g_pwd;
+        document.location.href = "./tour.html?userid=" + g_userid + "&password=" + g_pwd;
     } else{
         document.location.href = "404.html";
     }

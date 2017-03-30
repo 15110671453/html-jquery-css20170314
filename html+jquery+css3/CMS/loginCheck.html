@@ -33,7 +33,7 @@
                     请输入用户注册信息并单击登陆按钮
                 </div>
                 <!---第三块--->
-                <form action="./admin.html" method="get" class="bootstrap-admin-login-form">
+                <form  class="bootstrap-admin-login-form" >
                     <!---第3。1块--->
 
                    <h3>登陆系统</h3>
@@ -57,7 +57,7 @@
                         记住我
                         </label>
                     </div>
-                    <button class="btn btn-lg btn-primary" type="submit" id="id-submit" disabled>登陆</button>
+                    <button class="btn btn-lg btn-primary" type="submit"  id="id-submit"  onclick="loginSubmit();return false;"disabled>登陆</button>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="reg.html">新用户注册</a>
